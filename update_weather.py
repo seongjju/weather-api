@@ -4,8 +4,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()  
-# OpenWeather API 키
-API_KEY = os.getenv("OPENWEATHER_API_KEY") #31563b64da6452ee368abb8f9e78d807
+# OpenWeather API 키: 31563b64da6452ee368abb8f9e78d807
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 CITY = "Seoul"
 URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
 
@@ -48,4 +48,3 @@ def update_readme():
 
 if __name__ == "__main__":
     update_readme()
-
