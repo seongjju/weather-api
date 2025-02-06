@@ -10,17 +10,17 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: 리포지토리 체크아웃
+      - name: 리포지토리 체크아웃 
         uses: actions/checkout@v3
 
       - name: Python 설치
         uses: actions/setup-python@v3
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
       - name: OpenWeather API로 서울 날씨 업데이트
         run: |
-          pip install requests
+          pip install requests python-dotenv
           python update_weather.py
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
